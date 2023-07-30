@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./sidebar.css";
-import {LineStyle,Timeline,TrendingUp,EmailOutlined, Report, PermIdentity, AttachMoney, BarChart,  ChatBubbleOutline, WorkOutline, StorefrontOutlined, DynamicFeed} from '@mui/icons-material';
+import {LineStyle,Timeline,TrendingUp,EmailOutlined, Report, PermIdentity, BarChart,  ChatBubbleOutline, WorkOutline, DynamicFeed, PlayCircleOutline} from '@mui/icons-material';
+import ListIcon from '@mui/icons-material/List';
 
 export default function Sidebar() {
   return (
@@ -34,16 +35,18 @@ export default function Sidebar() {
                 Users
               </li>
             </Link>
-            <Link to="/products" className="link">
+            <Link to="/movies" className="link">
               <li className="sidebarListItem">
-                <StorefrontOutlined className="sidebarIcon" />
-                Products
+                <PlayCircleOutline className="sidebarIcon" />
+                Movies
               </li>
             </Link>
-            <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li>
+            <Link to="/lists" className="link">
+              <li className="sidebarListItem">
+                <ListIcon className="sidebarIcon" />
+                Lists
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />
               Reports
